@@ -1,0 +1,52 @@
+.budgeting-card {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 10px;
+}
+#emojis {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+#income-form {
+    align-items: center;
+    gap: 15px;
+    display: flex;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+label {
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 50%;
+}
+
+button {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 50%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
