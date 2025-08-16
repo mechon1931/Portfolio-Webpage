@@ -6,47 +6,57 @@
     margin: 10px;
 }
 #emojis {
-    font-size: 50px;
+    font-size: 30px;
     margin-bottom: 10px;
 }
 
-#income-form {
-    align-items: center;
-    gap: 15px;
+#container {
     display: flex;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    flex-direction: column;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-label {
-  font-weight: bold;
-  color: #333;
-}
-
-input[type="number"] {
+    flex-direction: row;
+    flex: wrap;
+    justify-content: space-between;
+    flex-grow: 1;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    width: 50%;
 }
 
-button {
+#left-card {
+    border: orange 5px solid;
+    border-radius: 20px;    
+    padding: 10px;
+    margin: 10px;
+    flex-grow: 1;
+}
+
+#right-card {
+    border: orange 5px solid;
+    border-radius: 20px;    
+    padding: 10px;
+    margin: 10px;
+    flex-grow: 1;
+}
+
+#income-form-card {
+    border: orange 5px solid;
+    border-radius: 20px;    
+    padding: 10px;
+    margin: 10px;
+    flex-grow: 1;
+    height: fit-content;
+    text-align: center;
+}
+
+#income-form-element {
     display: flex;
-    flex-direction: column;
-    padding: 10px 15px;
-    border: none;
-    background-color: #007BFF;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 50%;
+    flex-direction: row;
+    gap: 10px;
 }
 
-button:hover {
-    background-color: #0056b3;
+.income-entry {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
 }
