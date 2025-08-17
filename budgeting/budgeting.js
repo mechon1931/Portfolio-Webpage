@@ -1,13 +1,19 @@
 const container = document.getElementById('container-card');
 const incomeForm = document.getElementById('income-form');
+const favoritesList = document.getElementById('favorites-list');
 
-function containerCard() {
-    
+let totalIncomeDisplay;
+let totalPlannedIncome = 0;
+let IncomeEntries = [];
+
+function plannedIncomeandMonthlyIncomeCard() {
+
     return container.innerHTML = `
         <div id="container">
             <div id="left-card" id="planned-income">
                 <p id="emojis">&#128176;</p>
                 <h3>Planned Income</h3>
+                <span id="total-income">$0</span>
             </div>
 
             <div id="right-card" id="actual-income">
@@ -18,7 +24,19 @@ function containerCard() {
 
 }
 
-containerCard();    
+plannedIncomeandMonthlyIncomeCard();    
+
+totalIncomeDisplay = document.getElementById('total-income');
+
+
+function saveIncomeToLocalStorage() {
+  try {
+    localStorage.setItem('plannedIncomeEntries', JSON.stringify(IncomeEntries));
+    console.log('Income entries saved to localStorage.');
+  } catch (error) {
+    console.error('Error saving to localStorage:', error);  
+  }
+} 
 
 function createIncomeFormCard() {
   // Create the main container div
@@ -62,14 +80,31 @@ function createIncomeFormCard() {
       `;
       incomeOutput.appendChild(newIncomeEntry);
 
+      saveIncomeToLocalStorage();
+
       incomeSourceInput.value = '';
       incomeAmountInput.value = '';
+
+      totalIncome(amount);
     } else {
       alert('Please enter a valid income source and amount.');
     }
-  });
-  
+    
+  });  
 }
+// this is the beginning of total income function
+
+function totalIncome(amount) {
+  totalPlannedIncome += amount;
+
+  if (totalIncomeDisplay) {
+    totalIncomeDisplay.textContent = '$' + totalPlannedIncome.toLocaleString();
+  } else {
+    console.error('Total income display element not found.');
+  } 
+}
+
 // Call the function to create the form
 createIncomeFormCard();
+// this is the end of total income function
 
