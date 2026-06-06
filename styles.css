@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: #0a0a0a;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+/* Header */
+header {
+    background: #111;
+    padding: 1rem 0;
+    border-bottom: 1px solid #222;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.logo-icon {
+    font-size: 1.8rem;
+}
+
+/* Date & Greeting */
+.date-greeting {
+    text-align: center;
+    flex: 1;
+}
+
+.date {
+    font-size: .95rem;
+    color: #888;
+    font-weight: 500;
+}
+
+.greeting {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+/* Right buttons */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-btn {
+    background: #1f1f1f;
+    border: none;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    color: #fff;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.icon-btn:hover {
+    background: #333;
+    transform: scale(1.08);
+}
+
+
+
+@media (min-width: 768px) {
+    .headder {
+        padding: 1.2rem 0;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    .logo-icon {
+        font-size: 2.2rem;
+    }
+
+    .date {
+        font-size: 1.1rem;
+    }
+
+    .greeting {
+        font-size: 1.35rem;
+    }
+
+    .icon-btn {
+        width: 48px;
+        height: 48px;
+        font-size: 1.4rem;
+    }
+}   
