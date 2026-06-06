@@ -108,7 +108,9 @@ body.light-mode .icon-btn {
     color: #222;
 }
 
-body.
+body.light-mode .icon-btn:hover {
+    background: #e0e0e0;
+}
 
 @media (min-width: 768px) {
     .header {
