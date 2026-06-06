@@ -1,3 +1,26 @@
+const themeToggle =document.getElementById('theme-toggle')
+
+function setTheme(mode) {
+    if(mode === 'light') {
+        document.body.classList.add('light-mode');
+        themeToggle.textContent = '🌞';
+    } else {
+        document.body.classList.remove('light-mode');
+        themeToggle.textContent = '🌙';
+    }
+
+    localStorage.setItem('theme', mode);
+}
+
+function loadTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        setTheme(savedTheme);
+    } else {
+        setTheme('dark');
+    }
+}
+
 function updateDate() {
     const dateEl = document.getElementById('current-date');
     const now = new Date();
@@ -22,11 +45,13 @@ function updateGreeting() {
     }
 }
 
-document.getElementById('theme-toggle').addEventListener('click', () => {
-    document.body.classList.toggle('light-mode');
-    const icon = document.getElementById('theme-toggle');
-    icon.textContent = document.body.classList.contains('light-mode') ? '🌞' : '🌙';
+
+
+themeToggle.addEventListener('click', () => {
+    const isLight = document.body.classList.contains('light-mode');
+    setTheme(isLight ? 'dark' : 'light');
 });
 
 updateDate();
 updateGreeting();
+loadTheme();
