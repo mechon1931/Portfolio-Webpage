@@ -92,6 +92,52 @@ header {
     transform: scale(1.08);
 }
 
+/* Stats Section */
+.stats {
+    padding: 1.5rem 16px 1rem;
+    background: #111;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stat-card {
+    background: #1a1a1a;
+    border-radius: 16px;
+    padding: 1.25rem 1rem;
+    text-align: center;
+    border: 1px solid #222;
+    transition: transform .2s;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+}
+
+.stat-label {
+    font-size: .85rem;
+    color: #888;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.stat-value {
+    font-size: 2.1rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.stat-sub {
+    font-size: .9rem;
+    color: #4ade80;
+}
+
 /* Light Mode */
 body.light-mode {
     background: #f8f9fa;
@@ -108,6 +154,7 @@ body.light-mode .date {
     color: #555;
 }
 
+/* Logo and Text Container */
 body.light-mode .icon-btn {
     background: #f0f0f0;
     color: #222;
@@ -116,6 +163,7 @@ body.light-mode .icon-btn {
 body.light-mode .icon-btn:hover {
     background: #e0e0e0;
 }
+
 
 /* Desktop Styles */
 @media (min-width: 768px) {
